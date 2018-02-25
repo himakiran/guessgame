@@ -1,9 +1,7 @@
-#!/bin/bash
-#makefile
-function makefile{
-$(touch README.md)
-echo "#GUESSING GAME PROJECT" >> README.md
-echo " " >> README.md
-$(date) >> README.md
-$(cat guessinggame.sh | wc -l ) >> README.md
-}
+# makefile for making README.md for guess game project
+
+README.md :
+	touch README.md
+	echo "#Project Guess Game" >> README.md
+	date >> README.md
+	cat guessinggame.sh | wc -l >> README.md
